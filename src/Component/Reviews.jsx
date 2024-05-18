@@ -28,11 +28,11 @@ const Reviews = () => {
     },
   ];
   return (
-    <div className="flex flex-col justify-evenly  bg-stone-300 ">
+    <div className="flex flex-col justify-evenly  bg-[#DFD0B8] ">
       <div className="font-bold pt-14 pb-3 text-xl text-center text-stone-600">
         {usage === "Reviews" && <h2>What people are saying...</h2>}
       </div>
-      <div className="flex flex-col justify-evenly bg-stone-300 py-10 lg:flex-row">
+      <div className="flex flex-col justify-evenly bg-[#DFD0B8] py-10 lg:flex-row">
         {Reviews.map((value) => {
           return <AboutFeatures value={value} reviews={"reviews"} />;
         })}

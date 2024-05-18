@@ -28,7 +28,7 @@ const About = () => {
     },
   ];
   return (
-    <div className="flex flex-col justify-evenly bg-stone-300 py-10 lg:flex-row">
+    <div className="flex flex-col justify-evenly bg-[#DFD0B8] py-10 lg:flex-row">
       {aboutObj.map((value) => {
         return <AboutFeatures value={value} key={value.id} />;
       })}
