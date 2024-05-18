@@ -3,7 +3,7 @@ const Body = ({ signup }) => {
   return (
     <div
       className={`flex flex-col justify-center items-center mx-1  ${
-        signup === "signup" ? "h-[50vh]" : "h-[90vh]"
+        signup === "signup" ? "h-[50vh]" : "h-[50vh] lg:h-[90vh] sm:h-[85vh]"
       }`}
     >
       {signup === "signup" ? (
