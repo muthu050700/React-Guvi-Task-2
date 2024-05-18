@@ -7,8 +7,8 @@ const GettingFeatures = ({ value }) => {
       }`}
     >
       <div className="sm:w-6/12 flex flex-col justify-center items-center my-10">
-        <h2 className="font-bold text-2xl py-4">{title}</h2>
-        <p className=" lg:w-[500px] font-light text-sm px-3 lg:text-lg">
+        <h2 className="font-bold text-2xl py-4 text-stone-600">{title}</h2>
+        <p className=" lg:w-[500px] font-light text-sm px-3 lg:text-lg text-stone-600 text-lg">
           {description}
         </p>
       </div>
