@@ -30,7 +30,7 @@ const Footer = () => {
           </a>
         </div>
         <p className="text-[#DFD0B8] font-medium">
-          © Your Website 2023. All Rights Reserved.
+          © Your Website 2024. All Rights Reserved.
         </p>
       </div>
     </div>
