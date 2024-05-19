@@ -29,7 +29,7 @@ const Footer = () => {
             <li>Service</li>
           </a>
         </div>
-        <p className="text-[#DFD0B8] font-medium">
+        <p className="text-[#DFD0B8] font-medium  ">
           © Your Website 2024. All Rights Reserved.
         </p>
       </div>
