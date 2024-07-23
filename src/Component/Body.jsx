@@ -119,6 +119,12 @@ const Body = ({ signup }) => {
                     duration: 0.5,
                   },
                 }}
+                whileTap={{
+                  scale: 0.8,
+                  transition: {
+                    duration: 0.5,
+                  },
+                }}
                 className=" border-stone-400 border-2 px-2 py-[6px]  text-[#153448] bg-[#DFD0B8] font-bold rounded-lg ml-2 text-sl  sm:px-4 sm:py-3 lg:py-[17px]  xl:py-6 sm:text-lg lg:text-2xl xl:px-5 xl:text-xl"
                 onClick={handleEmail}
               >
