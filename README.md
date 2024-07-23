@@ -19,6 +19,8 @@ Tailwind CSS: 🎨 Harnessing the power of Tailwind CSS for streamlined and effi
 
 Responsive Design: 📱 Ensuring the website functions seamlessly on any device. Thanks to Tailwind's tools, the layout adjusts effortlessly to fit all screen sizes, providing an excellent user experience for all.
 
+For Animation, I have used framer motion.
+
 User Experience (UX): 🌟 I focused on making the website easy to use and enjoyable for visitors. By following user-friendly design principles and testing different designs, I ensured that every interaction feels natural and satisfying.
 
 Version Control: 🔄 Used Git and GitHub to manage my code and collaborate on the project.
