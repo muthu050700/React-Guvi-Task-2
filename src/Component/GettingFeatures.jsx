@@ -36,7 +36,7 @@ const GettingFeatures = ({ value, delayValue }) => {
           viewport={{
             once: true,
           }}
-          className=" lg:w-[500px] font-light px-3 lg:text-lg text-stone-600 text-lg"
+          className=" lg:w-[500px] font-light px-3 lg:text-lg text-stone-600 text-justify text-lg"
         >
           {description}
         </motion.p>
