@@ -29,8 +29,8 @@ const About = () => {
   ];
   return (
     <div className="flex flex-col justify-evenly bg-[#DFD0B8] py-10 lg:flex-row">
-      {aboutObj.map((value) => {
-        return <AboutFeatures value={value} key={value.id} />;
+      {aboutObj.map((value, index) => {
+        return <AboutFeatures value={value} key={value.id} delayVariable="1" />;
       })}
     </div>
   );

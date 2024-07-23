@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 const Footer = () => {
   return (
     <div className="bg-[#153448]">
@@ -16,22 +17,91 @@ const Footer = () => {
       </div>
       <div className="flex flex-col justify-center items-center h-15 bg[#153448] py-4">
         <div className="flex gap-8 py-4 list-none text-[#DFD0B8] font-medium">
-          <a href="#" className="hover:tracking-wider hover:transition-all">
+          <motion.a
+            initial={{ scope: 0.8, opacity: 0 }}
+            whileInView={{ scaope: 1, opacity: 1 }}
+            transition={{
+              delay: 0.3,
+              duration: 2,
+              type: "spring",
+              stiffness: 100,
+            }}
+            viewport={{
+              once: true,
+            }}
+            href="#"
+            className="hover:tracking-wider hover:transition-all"
+          >
             <li>Home</li>
-          </a>
-          <a href="#" className="hover:tracking-wider hover:transition-all">
+          </motion.a>
+          <motion.a
+            initial={{ scope: 0.8, opacity: 0 }}
+            whileInView={{ scaope: 1, opacity: 1 }}
+            transition={{
+              delay: 0.6,
+              duration: 2,
+              type: "spring",
+              stiffness: 100,
+            }}
+            viewport={{
+              once: true,
+            }}
+            href="#"
+            className="hover:tracking-wider hover:transition-all"
+          >
             <li>About</li>
-          </a>
-          <a href="#" className="hover:tracking-wider hover:transition-all">
+          </motion.a>
+          <motion.a
+            initial={{ scope: 0.8, opacity: 0 }}
+            whileInView={{ scaope: 1, opacity: 1 }}
+            transition={{
+              delay: 0.9,
+              duration: 2,
+              type: "spring",
+              stiffness: 100,
+            }}
+            viewport={{
+              once: true,
+            }}
+            href="#"
+            className="hover:tracking-wider hover:transition-all"
+          >
             <li>Contact us</li>
-          </a>
-          <a href="#" className="hover:tracking-wider hover:transition-all">
+          </motion.a>
+          <motion.a
+            initial={{ scope: 0.8, opacity: 0 }}
+            whileInView={{ scaope: 1, opacity: 1 }}
+            transition={{
+              delay: 1.2,
+              duration: 2,
+              type: "spring",
+              stiffness: 100,
+            }}
+            viewport={{
+              once: true,
+            }}
+            href="#"
+            className="hover:tracking-wider hover:transition-all"
+          >
             <li>Service</li>
-          </a>
+          </motion.a>
         </div>
-        <p className="text-[#DFD0B8] font-medium  ">
+        <motion.p
+          initial={{ scope: 0.8, opacity: 0 }}
+          whileInView={{ scaope: 1, opacity: 1 }}
+          transition={{
+            delay: 1.5,
+            duration: 2,
+            type: "spring",
+            stiffness: 100,
+          }}
+          viewport={{
+            once: true,
+          }}
+          className="text-[#DFD0B8] font-medium  "
+        >
           © Your Website 2024. All Rights Reserved.
-        </p>
+        </motion.p>
       </div>
     </div>
   );

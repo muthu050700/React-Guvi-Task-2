@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import { motion } from "framer-motion";
 const Body = ({ signup }) => {
   const [emailInputValue, setEmailInputValue] = useState("");
   const [errorMsg, setErrorMsg] = useState("");
@@ -37,45 +37,113 @@ const Body = ({ signup }) => {
         }`}
       >
         {signup === "signup" ? (
-          <h2 className="lg:py-10 py-4 text-xl font-extrabold sm:text-3xl lg:text-4xl xl:text-5xl text-center text-[#153448] ">
+          <motion.h2
+            initial={{ y: 50, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{
+              duration: 2,
+              ease: "easeIn",
+              delay: 0.5,
+              type: "spring",
+              stiffness: 60,
+            }}
+            viewport={{
+              once: true,
+            }}
+            className="lg:py-10 py-4 text-xl font-extrabold sm:text-3xl lg:text-4xl xl:text-5xl text-center text-[#153448] "
+          >
             Ready to get started? Sign up now!
-          </h2>
+          </motion.h2>
         ) : (
-          <h2 className="py-4 text-xl font-extrabold sm:text-3xl lg:text-4xl xl:text-5xl  text-[#DFD0B8] ">
+          <motion.h2
+            initial={{ y: 50, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{
+              duration: 2,
+              ease: "easeIn",
+              delay: 0.5,
+              type: "spring",
+              stiffness: 60,
+            }}
+            className="py-4 text-xl font-extrabold sm:text-3xl lg:text-4xl xl:text-5xl  text-[#DFD0B8] "
+          >
             Generate more leads with a{" "}
             <p className="py-2">professional landing page!</p>
-          </h2>
+          </motion.h2>
         )}
 
-        <form className="">
-          <input
-            className={` text-sm sm:text-lg lg:text-2xl border bg-stone-100 text-stone-600 w-[200px] py-2 px-2  rounded-lg sm:w-[315px] sm:py-3 lg:w-[390px] lg:py-[17px] xl:w-[530px] xl:py-5 x items-center  ${
-              valid === ""
-                ? " border-stone-400 border-2"
-                : valid
-                ? "border-red-500  border-[3px]"
-                : "border-green-600 border-[3px]"
-            }`}
-            placeholder="Email address"
-            onChange={getInputValue}
-            value={emailInputValue}
-          />
-
-          <button
-            className="hover:tracking-wider hover:transition-all  border-stone-400 border-2 px-2 py-[6px]  text-[#153448] bg-[#DFD0B8]  rounded-lg ml-2 text-sl  sm:px-4 sm:py-3 lg:py-[17px]  xl:py-5 sm:text-lg lg:text-2xl xl:px-5 xl:text-xl"
-            onClick={handleEmail}
-          >
-            Submit
-          </button>
+        <form>
+          <div className="flex">
+            <motion.input
+              initial={{ y: 50, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{
+                duration: 2,
+                ease: "easeIn",
+                delay: 0.8,
+                type: "spring",
+                stiffness: 60,
+              }}
+              viewport={{
+                once: true,
+              }}
+              className={` text-sm sm:text-lg lg:text-2xl border bg-stone-100 text-stone-600 w-[200px] py-2 px-2  rounded-lg sm:w-[315px] sm:py-3 lg:w-[390px] lg:py-[17px] xl:w-[530px] xl:py-5 x items-center  ${
+                valid === ""
+                  ? " border-stone-400 border-2"
+                  : valid
+                  ? "border-red-500  border-[3px]"
+                  : "border-green-600 border-[3px]"
+              }`}
+              placeholder="Email address"
+              onChange={getInputValue}
+              value={emailInputValue}
+            />
+            <motion.div
+              initial={{ y: 50, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{
+                duration: 2,
+                ease: "easeIn",
+                delay: 1.1,
+                type: "spring",
+                stiffness: 60,
+              }}
+              viewport={{
+                once: true,
+              }}
+            >
+              <motion.button
+                whileHover={{
+                  scale: 1.1,
+                  transition: {
+                    duration: 0.5,
+                  },
+                }}
+                className=" border-stone-400 border-2 px-2 py-[6px]  text-[#153448] bg-[#DFD0B8] font-bold rounded-lg ml-2 text-sl  sm:px-4 sm:py-3 lg:py-[17px]  xl:py-6 sm:text-lg lg:text-2xl xl:px-5 xl:text-xl"
+                onClick={handleEmail}
+              >
+                Submit
+              </motion.button>
+            </motion.div>
+          </div>
 
           <div>
-            <p
+            <motion.div
+              initial={{ x: -100, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{
+                duration: 2,
+                ease: "easeIn",
+                delay: 1.1,
+                type: "spring",
+                stiffness: 60,
+              }}
               className={`${
                 valid ? "text-red-600 " : "text-green-700"
               } text-sm my-1 sm:my-2 sm:text-lg lg:my-3 lg:text-xl xl:my-4 xl:text-2xl`}
             >
-              {errorMsg}
-            </p>
+              <p>{errorMsg}</p>
+            </motion.div>
           </div>
         </form>
       </div>

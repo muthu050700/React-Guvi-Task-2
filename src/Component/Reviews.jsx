@@ -1,5 +1,5 @@
 import AboutFeatures from "./AboutFeatures";
-
+import { motion } from "framer-motion";
 const Reviews = () => {
   const usage = "Reviews";
   const Reviews = [
@@ -29,12 +29,33 @@ const Reviews = () => {
   ];
   return (
     <div className="flex flex-col justify-evenly  bg-[#DFD0B8] ">
-      <div className="font-bold pt-14 pb-3 text-xl text-center text-stone-600">
+      <motion.div
+        initial={{ y: 50, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{
+          duration: 2,
+          ease: "easeIn",
+          delay: 0.5,
+          type: "spring",
+          stiffness: 60,
+        }}
+        viewport={{
+          once: true,
+        }}
+        className="font-bold pt-14 pb-3 text-xl text-center text-stone-600"
+      >
         {usage === "Reviews" && <h2>What people are saying...</h2>}
-      </div>
+      </motion.div>
       <div className="flex flex-col justify-evenly bg-[#DFD0B8] py-10 lg:flex-row">
-        {Reviews.map((value) => {
-          return <AboutFeatures value={value} reviews={"reviews"} />;
+        {Reviews.map((value, index) => {
+          return (
+            <AboutFeatures
+              key={value.id}
+              value={value}
+              reviews={"reviews"}
+              delayVariable="1"
+            />
+          );
         })}
       </div>
     </div>
